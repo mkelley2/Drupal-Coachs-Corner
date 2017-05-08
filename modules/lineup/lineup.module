@@ -1,0 +1,5 @@
+<?php
+
+function lineup_form_submit(){
+  return "works";
+}

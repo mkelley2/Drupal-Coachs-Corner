@@ -12,17 +12,15 @@ class LineupController extends ControllerBase {
 
     $nids = \Drupal::entityQuery('node')->condition('type','player')->execute();
     $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
-    $output = '';
+    $output = '<form>';
     foreach ($nodes as $node){
-      print "<pre>";
-      print_r($node->title->value);
-      print "</pre>";
+      $output .= '<input type="checkbox">' . $node->title->value . '<br>';
     }
-
+    $output .= '<input type="submit"></form>';
 
     return array(
       '#type' => 'markup',
-      '#markup' => $this->t('<input type="checkbox">'),
+      '#markup' => $this->t($output),
     );
   }
 }
