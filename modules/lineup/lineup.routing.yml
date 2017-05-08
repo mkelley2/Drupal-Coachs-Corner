@@ -1,0 +1,7 @@
+lineup.lineup_controller:
+  path: '/lineup'
+  defaults:
+    _controller: '\Drupal\lineup\Controller\LineupController::lineup'
+    _title: 'Lineup'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,5 @@
+name: Lineup
+description: Create a batting order and position map
+package: My custom modules
+type: module
+core: 8.x
